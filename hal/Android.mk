@@ -62,7 +62,7 @@ LOCAL_C_INCLUDES += \
     system/media/audio_utils/include \
     external/expat/lib \
     vendor/qcom/opensource/core-utils/fwk-detect \
-    $(call project-path-for,qcom-audio)/pal \
+    vendor/qcom/opensource/pal \
     $(call include-path-for, audio-effects) \
     $(LOCAL_PATH)/audio_extn \
     $(call project-path-for,qcom-audio)/pal/ipc/HwBinders/pal_ipc_server/inc/
@@ -108,8 +108,8 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_AGM_HIDL)),true)
 
   LOCAL_CFLAGS += -DAGM_HIDL_ENABLED
   LOCAL_C_INCLUDES += \
-    $(call project-path-for,qcom-audio)/agm/ipc/HwBinders/agm_ipc_client/ \
-    $(call project-path-for,qcom-audio)/agm/ipc/HwBinders/agm_ipc_service/inc/
+    vendor/qcom/opensource/agm/ipc/HwBinders/agm_ipc_client/ \
+    vendor/qcom/opensource/agm/ipc/HwBinders/agm_ipc_service/inc/
 
   LOCAL_HEADER_LIBRARIES += \
     libagm_headers
